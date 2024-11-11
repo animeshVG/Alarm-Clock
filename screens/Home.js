@@ -3,11 +3,11 @@ import React from 'react';
 import Indicator from '../components/Indicator';
 import Alarms from '../components/Alarms';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.bg}>
       <Indicator />
-      <Alarms />
+      <Alarms navigation={navigation} />
     </View>
   );
 };

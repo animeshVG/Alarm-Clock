@@ -1,13 +1,15 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Pressable} from 'react-native';
 import React from 'react';
 import Card from './Card';
 
-const Alarms = () => {
+const Alarms = ({navigation}) => {
   return (
     <View style={styles.bg}>
       <View style={styles.hero}>
         <View style={styles.add}>
-          <Text style={styles.Text}>+</Text>
+          <Pressable onPress={() => navigation.navigate('Set')}>
+            <Text style={styles.Text}>+</Text>
+          </Pressable>
         </View>
         <Card time={'9:15 AM'} days={'Weekends'} />
         <Card time={'2:00 PM'} days={'Weekdays'} />
